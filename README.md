@@ -59,6 +59,16 @@
 
 ### Tasks
 
+| property 		| type 			| description 	| example		|
+| ------------- | ------------- | -------------------------------------------------	| -------------------------	|
+| name 			| string 		| Describes the action the task should do			| "build" 					|
+| creep 		| Creep 		| The Creep the Task is assigned to		 			| [Creep_worker_0]			|
+| target 		| RoomObject* 	| The target to perform an action on (*Exceptions: TaskDrop, TaskGoTo, TaskGoToRoom) | [ConstructionSite <id>] |
+| targetPos 	| RoomPosition	| The position of the target, accessible even if the target is not visible | [RoomPosition x y name] |
+| settings 		| Object 		| Settings common to a given type of task (e.g. range of an action); shouldn't be modified on a per-instance basis | {targetRange: 3, workOffRoad: true} |
+| options 		| Object 		| Options configurable for a specific instance of a task (e.g. don't invalidate task if target visibility is lost) | {blind: true, moveOptions: <options> |
+| data 			| Object 		| Data pertaining to a task instance 				| {resourceType: "ghodium"}	|
+| parent Task 	| `null` 	| Task to revert to once the current task is finished 	| `null` 					|
 
 name	string	Describes the action the task should do	"build"
 creep	Creep	The creep the task is assigned to	[Creep worker_0]
