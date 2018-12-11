@@ -5,69 +5,73 @@
 ## Dev Plan
 ### Creeps
 
-### Core
+#### Core
 
 ###### Harvester
 
-•	Builds a container, transfers energy to it, and calls on a Hauler.
+ • Builds a container, transfers energy to it, and calls on a Hauler.
 
-•	If in an owned room, transfer energy to a link.
+ • If in an owned room, transfer energy to a link.
 
 ###### Hauler
 
-•	Can be called by a full Container … (more).
+ • Can be called by a full Container … (more).
 
-•	Moves on predefined Paths.
+ • Moves on predefined Paths.
 
-•	Transfers Energy to other Haulers infront of it (moves forward or backward).
+ • Transfers Energy to other Haulers infront of it (moves forward or backward).
 
-•	Transfers Energy to Storage (from sources, dropped energy, storages from other rooms).
+ • Transfers Energy to Storage (from sources, dropped energy, storages from other rooms).
+
+###### Convoy
+
+
 
 ###### Manager (BaseHauler RCL 8)
 
-• Takes energy from link to store in Storage or Tower.
+ • Takes energy from link to store in Storage or Tower.
 
 ###### Upgrader
 
-• Takes energy from Storage to Upgrade the Controller.
+ • Takes energy from Storage to Upgrade the Controller.
 
 ### Experimental
 
 ###### Scout
 
-• Used to discover new Rooms.
+ • Used to discover new Rooms.
 
 ###### Reserver
 
-• Reserves a Controller in a foreign Room, then calls a Harvester.
+ • Reserves a Controller in a foreign Room, then calls a Harvester.
 
 ###### Nextroomer
 
-• Builds up a Room without a Spawn. (Until RCL 3, renewing itself?)
+ • Builds up a Room without a Spawn. (Until RCL 3, renewing itself?)
 
 ###### Maintainer
 
-• Maintains the base, as well as creates Walls and Ramparts.
+ • Maintains the base, as well as creates Walls and Ramparts.
 
 ###### BaseCourier
 
-• Takes minerals to labs and stuff other than energy.
+ • Takes minerals to labs and stuff other than energy.
 
 ### Additional
 
 ###### Engineer (BaseBuilder)
 
-• Builds all buildings in an owned room.
+ • Builds all buildings in an owned room.
 
-• Moves on to repair ramparts and walls when constructions are complete.
+ • Moves on to repair ramparts and walls when constructions are complete.
 
 ###### Diplomat
 
-• Goes to another Room and sends a Message.
+ • Goes to another Room and sends a Message.
 
 ###### Signer
 
-• Signs another Room's `Controller`.
+ • Signs another Room's `Controller`.
 
 ### Base
 
