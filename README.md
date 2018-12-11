@@ -99,7 +99,7 @@ parent	Task|null	Task to revert to once the current task is finished	null
   
   import {CreepSetup} from './CreepSetup';
 
-export const Roles = {
+`export const Roles = {
 	// Civilian roles
 	drone      : 'drone',
 	filler     : 'filler',
