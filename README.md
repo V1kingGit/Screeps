@@ -13,13 +13,13 @@
 
 #### Hauler
 
-•	Can be called by a full container … (more).
+•	Can be called by a full Container … (more).
 
-•	Moves on predefined path.
+•	Moves on predefined Paths.
 
-•	Transfers energy to other haulers infront of him (moves forward or backward).
+•	Transfers Energy to other Haulers infront of it (moves forward or backward).
 
-•	Transfers energy to storage (from sources, dropped energy, storages from other rooms).
+•	Transfers Energy to Storage (from sources, dropped energy, storages from other rooms).
 
 #### Manager
 
@@ -45,4 +45,14 @@
 
 #### Maintainer
 
-• Maintains the base, as well as creates walls and ramparts.
+• Maintains the base, as well as creates Walls and Ramparts.
+
+### Additional
+
+#### Diplomat
+
+• Goes to another Room and sends a Message.
+
+#### Signer
+
+• Signs another Room's Controller.
