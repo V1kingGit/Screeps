@@ -99,23 +99,42 @@ parent	Task|null	Task to revert to once the current task is finished	null
   
   import {CreepSetup} from './CreepSetup';
 
-`export const Roles = {
+export const Roles = {
+
 	// Civilian roles
+	
 	drone      : 'drone',
+	
 	filler     : 'filler',
+	
 	claim      : 'infestor',
+	
 	pioneer    : 'pioneer',
+	
 	manager    : 'manager',
+	
 	queen      : 'queen',
+	
 	scout      : 'scout',
+	
 	transport  : 'transport',
+	
 	worker     : 'worker',
+	
 	upgrader   : 'upgrader',
+	
 	// Combat roles
+	
 	guardMelee : 'broodling',
+	
 	guardRanged: 'mutalisk',
+	
 	melee      : 'zergling',
+	
 	ranged     : 'hydralisk',
+	
 	healer     : 'transfuser',
+	
 	dismantler : 'lurker',
-};`
+	
+};
