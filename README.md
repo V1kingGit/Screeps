@@ -25,11 +25,11 @@
 
 • Transfers Energy to Storage (from sources, dropped energy, storages from other rooms).
 
-###### Convoy
+###### Trader
 
 • Moves on predefined Paths.
 
-• Transports Energy between rooms.
+• Transports Energy between rooms with surplus, and rooms that need it.
 
 ###### Upgrader
 
