@@ -96,3 +96,26 @@ settings	Object	Settings common to a given type of task (e.g. range of an action
 options	Object	Options configurable for a specific instance of a task (e.g. don't invalidate task if target visibility is lost)	{blind: true, moveOptions: <options>}
 data	Object	Data pertaining to a task instance	{resourceType: "ghodium"}
 parent	Task|null	Task to revert to once the current task is finished	null
+  
+  import {CreepSetup} from './CreepSetup';
+
+export const Roles = {
+	// Civilian roles
+	drone      : 'drone',
+	filler     : 'filler',
+	claim      : 'infestor',
+	pioneer    : 'pioneer',
+	manager    : 'manager',
+	queen      : 'queen',
+	scout      : 'scout',
+	transport  : 'transport',
+	worker     : 'worker',
+	upgrader   : 'upgrader',
+	// Combat roles
+	guardMelee : 'broodling',
+	guardRanged: 'mutalisk',
+	melee      : 'zergling',
+	ranged     : 'hydralisk',
+	healer     : 'transfuser',
+	dismantler : 'lurker',
+};
