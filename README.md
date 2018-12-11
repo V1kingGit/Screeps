@@ -21,7 +21,7 @@
 
 •	Transfers Energy to Storage (from sources, dropped energy, storages from other rooms).
 
-#### Manager
+#### Manager (BaseHauler RCL 8)
 
 • Takes energy from link to store in Storage or Tower.
 
@@ -47,7 +47,17 @@
 
 • Maintains the base, as well as creates Walls and Ramparts.
 
+#### BaseCourier
+
+• Takes minerals to labs and stuff other than energy.
+
 ### Additional
+
+#### Engineer (BaseBuilder)
+
+• Builds all buildings in an owned room.
+
+• Moves on to repair ramparts and walls when constructions are complete.
 
 #### Diplomat
 
@@ -56,6 +66,14 @@
 #### Signer
 
 • Signs another Room's `Controller`.
+
+### Base
+
+#### Storage
+
+Has a main storage for storage of all energy, if there's too much energy, it will spawn more upgraders.
+
+Placed next to Controller.
 
 ### Tasks
 
