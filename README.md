@@ -3,15 +3,17 @@
 ## Dev Notes
 
 ## Dev Plan
-### Creeps:
+### Creeps
 
-#### Harvester
+### Core
+
+###### Harvester
 
 •	Builds a container, transfers energy to it, and calls on a Hauler.
 
 •	If in an owned room, transfer energy to a link.
 
-#### Hauler
+###### Hauler
 
 •	Can be called by a full Container … (more).
 
@@ -21,55 +23,55 @@
 
 •	Transfers Energy to Storage (from sources, dropped energy, storages from other rooms).
 
-#### Manager (BaseHauler RCL 8)
+###### Manager (BaseHauler RCL 8)
 
 • Takes energy from link to store in Storage or Tower.
 
-#### Upgrader
+###### Upgrader
 
 • Takes energy from Storage to Upgrade the Controller.
 
 ### Experimental
 
-#### Scout
+###### Scout
 
 • Used to discover new Rooms.
 
-#### Reserver
+###### Reserver
 
 • Reserves a Controller in a foreign Room, then calls a Harvester.
 
-#### Nextroomer
+###### Nextroomer
 
 • Builds up a Room without a Spawn. (Until RCL 3, renewing itself?)
 
-#### Maintainer
+###### Maintainer
 
 • Maintains the base, as well as creates Walls and Ramparts.
 
-#### BaseCourier
+###### BaseCourier
 
 • Takes minerals to labs and stuff other than energy.
 
 ### Additional
 
-#### Engineer (BaseBuilder)
+###### Engineer (BaseBuilder)
 
 • Builds all buildings in an owned room.
 
 • Moves on to repair ramparts and walls when constructions are complete.
 
-#### Diplomat
+###### Diplomat
 
 • Goes to another Room and sends a Message.
 
-#### Signer
+###### Signer
 
 • Signs another Room's `Controller`.
 
 ### Base
 
-#### Storage
+###### Storage
 
 Has a main storage for storage of all energy, if there's too much energy, it will spawn more upgraders.
 
