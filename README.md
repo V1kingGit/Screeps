@@ -41,7 +41,7 @@
 
 #### Nextroomer
 
-• Builds up a Room without a Spawn.
+• Builds up a Room without a Spawn. (Until RCL 3, renewing itself?)
 
 #### Maintainer
 
