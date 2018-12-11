@@ -118,4 +118,4 @@ parent	Task|null	Task to revert to once the current task is finished	null
 	ranged     : 'hydralisk',
 	healer     : 'transfuser',
 	dismantler : 'lurker',
-};
+};`
