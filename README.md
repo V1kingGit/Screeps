@@ -138,3 +138,5 @@ export const Roles = {
 	dismantler : 'lurker',
 	
 };
+
+https://github.com/bencbartlett/Overmind/blob/master/src/creepSetups/setups.ts
