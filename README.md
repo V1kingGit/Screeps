@@ -55,7 +55,7 @@
 
 #### Signer
 
-• Signs another Room's "Controller".
+• Signs another Room's ´Controller´.
 
 ### Tasks
 
