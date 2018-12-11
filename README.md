@@ -8,7 +8,6 @@
 #### Harvester
 
 •	Builds a container, transfers energy to it, and calls on a Hauler.
-
 •	If in an owned room, transfer energy to a link.
 
 #### Hauler
