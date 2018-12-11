@@ -69,12 +69,6 @@
 
 ### Additional
 
-###### Engineer (BaseBuilder)
-
-• Builds all buildings in an owned room.
-
-• Moves on to repair ramparts and walls when constructions are complete.
-
 ###### Diplomat
 
 • Goes to another Room and sends a Message.
