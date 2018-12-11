@@ -25,7 +25,7 @@
 
 • Transfers Energy to Storage (from sources, dropped energy, storages from other rooms).
 
-###### Trader
+###### Courier
 
 • Moves on predefined Paths.
 
