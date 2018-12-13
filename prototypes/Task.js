@@ -31,7 +31,7 @@ console.log('get: ' + taskdata.task)
 [12:08:40 PM]string: {"task":"Harvest","target":"1f190211362fbaccc1cfed6a","position":{"x":35,"y":20,"roomName":"sim"}}
 [12:08:40 PM]data: [object Object]
 [12:08:40 PM]get: Harvest
-
+ 
 ### Task Setup
  
 //var taskdata { task: 'TaskName', name: Game.creeps['CreepName'], targetid: sources[0].id, targetPos: sources[0].pos, done: null }
