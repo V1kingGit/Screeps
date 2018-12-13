@@ -34,4 +34,6 @@ console.log('get: ' + taskdata.task)
 
 ### Task Setup
 
+//var taskdata { task: 'TaskName', name: Game.creeps['CreepName'], targetid: sources[0].id, targetPos: sources[0].pos, done: null }
+
 var taskdata { task: 
