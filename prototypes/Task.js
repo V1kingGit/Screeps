@@ -1,6 +1,6 @@
-#Task Experiments
+# Task Experiments
 
-##Task Storage
+### Task Storage
 
 console.log('-------------------------');
 
@@ -23,7 +23,7 @@ console.log('get: ' + taskdata.task)
 // Convert memory back to taskdata
 // Use taskdata.X to extract different information from taskdata
 
-####Output: 
+###### Output: 
  
 -------------------------
 [12:08:40 PM]id: 1f190211362fbaccc1cfed6a
@@ -31,3 +31,7 @@ console.log('get: ' + taskdata.task)
 [12:08:40 PM]string: {"task":"Harvest","target":"1f190211362fbaccc1cfed6a","position":{"x":35,"y":20,"roomName":"sim"}}
 [12:08:40 PM]data: [object Object]
 [12:08:40 PM]get: Harvest
+
+### Task Setup
+
+var taskdata { task: 
