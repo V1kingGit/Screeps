@@ -9,37 +9,79 @@
 ### King (Kingdom)
 Overmind
 
-•
+• Runs: Jarldoms & wild Vikings.
+
+• Tasks: Strategy, Jarldom cooperation.
+
+• Place: ???
+
+• Types: ???
 
 ### Jarl (Jarldom)
 Colony
 
-• 
+• Runs: Towns & some Stewards.
+
+• Tasks: Running a whole Jarldom.
+
+• Place: Main room. <-- NAMING
+
+• Types: ???
 
 #### Bailiff
 Overseer
 
-•
+• Runs: All the Stewards of a Jarldom.
+
+• Tasks: Orders/Places Directives in response to various things.
+
+• Place: ?!?
+
+• Types: ???
 
 ###### Steward
 Overlord
 
-•
+• Runs: Vikings???
 
-##### Landsmann (Village)
+• Tasks: Handles Creep Tasks.
+
+• Place: Anything that has (name, room, pos, colony, memory) - Colony, Hive Clusters, Directives. ???
+
+• Types: Colony, Hive Cluster, Directive...???
+
+##### Landsmann (Town)
 HiveCluster
 
-•
+• Runs: ???
+
+• Tasks: Calculate data relevant for its type, and request logistic tasks.
+
+• Place: RoomObject??? - Object in middle of it's Cluster.
+
+• Types: Village, Castle, MiningSite, UpgradeSite. MiningPost???
 
 ##### Marshall?
 Directive
 
-•
+• Runs: ???
+
+• Tasks: Point out actions to be taken, or assist in pointing out various things.
+
+• Place: Flags.
+
+• Types: Defence, etcetera... (FIND NECESSITY)
 
 ###### Viking
 Zerg
 
-•
+• Runs: ???
+
+• Tasks: Carry out tasks and orders.
+
+• Place: Creeps.
+
+• Types: See below.
 
 ## Creeps
 
