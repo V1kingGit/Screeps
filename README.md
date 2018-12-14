@@ -6,37 +6,37 @@
 
 ### Hierarchy
 
-#### King (Kingdom)
+## King (Kingdom)
 Overmind
 
 •
 
-##### Jarl (Jarldom)
+### Jarl (Jarldom)
 Colony
 
 • 
-
-#### Landsmann (Village)
-HiveCluster
-
-•
-
-#### Marshall?
-Directive
-
-•
-
-#### Steward
-Overlord
-
-•
 
 #### Bailiff
 Overseer
 
 •
 
-#### Viking
+###### Steward
+Overlord
+
+•
+
+##### Landsmann (Village)
+HiveCluster
+
+•
+
+##### Marshall?
+Directive
+
+•
+
+###### Viking
 Zerg
 
 •
