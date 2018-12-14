@@ -1,12 +1,12 @@
 # Screeps
 
-## Dev Notes
+# Dev Notes
 
-## Dev Plan
+# Dev Plan
 
-### Hierarchy
+## Hierarchy
 
-## King (Kingdom)
+### King (Kingdom)
 Overmind
 
 •
@@ -41,7 +41,7 @@ Zerg
 
 •
 
-### Creeps
+## Creeps
 
 #### Core
 
@@ -115,7 +115,7 @@ Zerg
 
 • Signs another Room's `Controller`.
 
-### Base
+## Base
 
 ###### Storage
 
@@ -123,7 +123,7 @@ Has a main storage for storage of all energy, if there's too much energy, it wil
 
 Placed next to Controller.
 
-### Tasks
+## Tasks
 
 | property 		| type 			| description 	| example		|
 | ------------- | ------------- | -------------------------------------------------	| -------------------------	|
