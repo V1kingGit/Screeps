@@ -3,6 +3,44 @@
 ## Dev Notes
 
 ## Dev Plan
+
+### Hierarchy
+
+#### King (Kingdom)
+Overmind
+
+•
+
+##### Jarl (Jarldom)
+Colony
+
+• 
+
+#### Landsmann (Village)
+HiveCluster
+
+•
+
+#### Marshall?
+Directive
+
+•
+
+#### Steward
+Overlord
+
+•
+
+#### Bailiff
+Overseer
+
+•
+
+#### Viking
+Zerg
+
+•
+
 ### Creeps
 
 #### Core
