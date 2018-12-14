@@ -24,7 +24,7 @@ Colony
 
 • Tasks: Running a whole Jarldom.
 
-• Place: Main room. <-- NAMING
+• Place: Main room. <-- NAMING (town?)
 
 • Types: ???
 
@@ -50,7 +50,7 @@ Overlord
 
 • Types: Colony, Hive Cluster, Directive...???
 
-##### Landsmann (Town)
+##### Landsmann (District)
 HiveCluster
 
 • Runs: ???
