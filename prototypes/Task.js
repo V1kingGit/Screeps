@@ -34,6 +34,57 @@ console.log('get: ' + taskdata.task)
 
 ### Task Setup
 
-//var taskdata { task: 'TaskName', name: Game.creeps['CreepName'], targetid: sources[0].id, targetPos: sources[0].pos, done: null }
+//var taskdata = { task: 'TaskName', name: Game.creeps['CreepName'], targetid: sources[0].id, targetPos: sources[0].pos, done: null }
 
-var taskdata { task: 
+### Implementation example
+
+import {Jarldom, JarldomLevel, DEFCON} from '../Jarldom';
+
+#define	TASK_TRANSFER	19
+
+Bryti.prototype.Village = function()
+{
+	var
+		spawns,
+		extensions,
+		links, // UNUSED
+		towers // UNUSED
+	;
+	
+	this.spawns = Jarldom.spawns;
+	this.extensions = Jarldom.extensions;
+	
+	memory: HatcheryMemory;
+	spawns: StructureSpawn[]; 								// List of spawns in the hatchery
+	availableSpawns: StructureSpawn[]; 						// Spawns that are available to make stuff right now
+	extensions: StructureExtension[]; 						// List of extensions in the hatchery
+	energyStructures: (StructureSpawn | StructureExtension)[]; 	// All spawns and extensions
+	link: StructureLink | undefined; 						// The input link
+	towers: StructureTower[]; 								// All towers that aren't in the command center
+	battery: StructureContainer | undefined;				// The container to provide an energy buffer
+	transportRequests: TransportRequestGroup;				// Box for energy requests
+	overlord: QueenOverlord | BunkerQueenOverlord;			// Hatchery overlord if past larva stage
+}
+
+function newTask(vTask, vName, vTargetid, vTargetPos)
+{
+	var taskdata = { task: vTask, name: vName, targetid:, vTargetid, targetPos: vTargetPos };
+	
+}
+
+module.exports.loop = function ()
+{
+	if(Village.energy < Village.energyCapacity)
+	{
+		newTask(TASK_TRANSFER, 'creep', Game.spawns['Spawn1'], Game.spawns['Spawn1'].pos);
+	}
+}
+
+function getBryti(creep)
+{
+	if(creep.memory.bryti)
+	{
+		return King.brytis[creep.memory.bryti];
+	}
+	else return null;
+}
