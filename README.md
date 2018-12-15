@@ -39,7 +39,7 @@ Overseer
 
 • Types: ???
 
-##### Steward
+##### Sysselmann
 Overlord
 
 • Runs: Vikings???
