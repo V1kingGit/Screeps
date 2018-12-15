@@ -35,6 +35,7 @@ console.log('get: ' + taskdata.task)
 ### Task Setup
 
 //var taskdata = { task: 'TaskName', name: Game.creeps['CreepName'], targetid: sources[0].id, targetPos: sources[0].pos, done: null }
+//var overmindtask { name: 'TaskName', creep: Game.creeps['CreepName'], target: sources[0].id, targetPos: sources[0].pos, settings: {targetRange: 3, workOffRoad: true}, options: {blind: true, moveOptions: <options>}, data: {resourceType: "ghodium"}, done: null }
 
 ### Implementation example
 
