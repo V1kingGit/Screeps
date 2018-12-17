@@ -11,6 +11,8 @@ const	PRIORITY_LOW	1
 const	PRIORITY_MEDIUM	2
 const	PRIORITY_HIGH	3
 
+let roleHarvester = require('role.harvester');
+
 // Sysselmann.newTask(TASK_HARVEST, 'creep', sources[0].id, sources[0].pos, PRIORITY_MEDIUM);
 
 function canDoTask(role, task)
@@ -44,7 +46,7 @@ RoomObject.prototype.createTask = function(vTask, vName, vTargetid, vTargetPos, 
 	this.memory.tasks[freeSlot] = taskData;
 }
 
-function newTask(creep)
+/*function newTask(creep)
 {
 	let sysselmann = creep.memory.sysselmann,
 		assigned[10],
@@ -70,7 +72,7 @@ function newTask(creep)
 		}
 	}
 	creep.memory.task = findClosestByRange(assigned.targetPos);
-}
+}*/
 
 Creep.prototype.task = function(assignment)
 {
@@ -95,7 +97,7 @@ module.exports.loop = function()
 			let creep = Game.creeps[name];
 			if(creep.isIdle)
 			{
-				newTask(creep);
+				roleHarvester.newTask(creep);
 			}
 			creep.run();
 		}
