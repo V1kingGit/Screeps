@@ -46,32 +46,15 @@ let roleHarvester =
 			}
 		}
 	}
-	work: function()
+	work: function(creep)
 	{
-	}
-	move: function()
-}
-
-module.exports = roleHarvester;
-
-function newTask(creep)
-{
-	let sysselmann = creep.memory.sysselmann,
-		assigned[10],
-		priorityLevel = PRIORITY_LOW;
-	for(i = 0; i < sysselmann.memory.tasks.length; i ++)
-	{
-		if(sysselmann.memory.tasks[i].priority < priorityLevel) continue;
-		if(canDoTask(creep.memory.role, sysselmann.memory.tasks[i]))
+		switch(creep.memory.task)
 		{
-			for(x = 0; x < assigned.length; x ++)
+			case TASK_HARVEST:
 			{
-				if(!assigned)
+				if(creep.harvest(getObjectById(creep.memory.task.targetid)) == ERR_NOT_IN_RANGE)
 				{
-					assigned[x] = sysselmann.memory.tasks[i];
-					if(sysselmann.memory.tasks[i].priority > priorityLevel)
-					{
-						assigned = [];
+					creep.moveTo(Ad
 						priorityLevel = sysselmann.memory.tasks[i].priority;
 					}
 					break;
