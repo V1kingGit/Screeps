@@ -54,10 +54,15 @@ let roleHarvester =
 			{
 				if(creep.harvest(getObjectById(creep.memory.task.targetid)) == ERR_NOT_IN_RANGE)
 				{
-					creep.moveTo(Ad
-						priorityLevel = sysselmann.memory.tasks[i].priority;
+					room.memory.paths.sourcepath[0] = { startobject: Game.spawns['Spawn1'], endobject: sources[0].id, path:  }
+					if(creep.room.memory.paths.sourcepath[creep.memory.task.targetid] == room.memory.paths.sourcepath[0].endobject)
+					switch(creep.memory.task.targetid)
+					{
+						case creep.room.memory.paths.sourcepath[0].endobject: creep.moveByPath
+						case creep.room.memory.paths.sourcepath[1].endobject:
+						default: creep.moveTo(getObjectById(creep.memory.task.targetid));
 					}
-					break;
+					creep.moveTo(Ad
 				}
 			}
 		}
