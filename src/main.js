@@ -4,12 +4,12 @@ var
   benchmark = 0
 ;
 
-const	TASK_HARVEST	1
-const	TASK_TRANSFER	2
+const	TASK_HARVEST	= 1
+const	TASK_TRANSFER	= 2
 
-const	PRIORITY_LOW	1
-const	PRIORITY_MEDIUM	2
-const	PRIORITY_HIGH	3
+const	PRIORITY_LOW	= 1
+const	PRIORITY_MEDIUM	= 2
+const	PRIORITY_HIGH	= 3
 
 let roleHarvester = require('role.harvester');
 
@@ -31,10 +31,10 @@ function canDoTask(role, task)
 	}
 }
 
-RoomObject.prototype.createTask = function(vTask, vName, vTargetid, vTargetPos, vPriority)
+/*RoomObject.prototype.createTask = function(vTask, vName, vTargetid, vTargetPos, vPriority)
 {
 	let	freeSlot,
-		taskData = { task: vTask, name: vName, targetid:, vTargetid, targetPos: vTargetPos, priority: vPriority };
+		taskData = { task: vTask, name: vName, targetid: vTargetid, targetPos: vTargetPos, priority: vPriority };
 	for(i = 0; i < this.memory.tasks; i ++)
 	{
 		if(!this.memory.tasks[i])
@@ -44,44 +44,28 @@ RoomObject.prototype.createTask = function(vTask, vName, vTargetid, vTargetPos, 
 		}
 	}
 	this.memory.tasks[freeSlot] = taskData;
-}
-
-/*function newTask(creep)
-{
-	let sysselmann = creep.memory.sysselmann,
-		assigned[10],
-		priorityLevel = PRIORITY_LOW;
-	for(i = 0; i < sysselmann.memory.tasks.length; i ++)
-	{
-		if(sysselmann.memory.tasks[i].priority < priorityLevel) continue;
-		if(canDoTask(creep.memory.role, sysselmann.memory.tasks[i]))
-		{
-			for(x = 0; x < assigned.length; x ++)
-			{
-				if(!assigned)
-				{
-					assigned[x] = sysselmann.memory.tasks[i];
-					if(sysselmann.memory.tasks[i].priority > priorityLevel)
-					{
-						assigned = [];
-						priorityLevel = sysselmann.memory.tasks[i].priority;
-					}
-					break;
-				}
-			}
-		}
-	}
-	creep.memory.task = findClosestByRange(assigned.targetPos);
 }*/
 
-Creep.prototype.task = function(assignment)
+Creep.prototype.hasValidTask = function()
 {
-	this.memory.task = assignment;
+    if(this.memory.task && isValidTask(this.memory.task))
 }
 
-Creep.prototype.run = function()
+function isValidTask(creep, task)
 {
-	
+    switch(task.task)
+    {
+        case TASK_HARVEST:
+        {
+            if(creep.carry.energy >= creep.carryCapacity) return 0;
+            if(task.targetid && task.targetid.energy > 0) return 0;
+        }
+        case TASK_TRANSFER:
+        {
+            if(creep.carry.energy >= creep.carryCapacity) return 0;
+            if(task.targetid && task.targetid.energy > 0) return 0;
+        }
+    }
 }
 
 module.exports.loop = function()
@@ -95,11 +79,14 @@ module.exports.loop = function()
 		else
 		{
 			let creep = Game.creeps[name];
-			if(creep.isIdle)
+			if(creep.hasValidTask())
 			{
 				roleHarvester.newTask(creep);
 			}
-			creep.run();
+			else
+			{
+				roleHarvester.work(creep);
+			}
 		}
 	}
 	
