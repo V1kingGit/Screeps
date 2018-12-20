@@ -6,4 +6,4 @@ let adminKing =
 	}
 }
 
-module.exports = adminKing
+module.exports = adminKing;
