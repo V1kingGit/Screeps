@@ -4,14 +4,16 @@ var
   benchmark = 0
 ;
 
-const	TASK_HARVEST	= 1
-const	TASK_TRANSFER	= 2
+export const	TASK_HARVEST	= 1
+export const	TASK_TRANSFER	= 2
 
 const	PRIORITY_LOW	= 1
 const	PRIORITY_MEDIUM	= 2
 const	PRIORITY_HIGH	= 3
 
 let roleHarvester = require('role.harvester');
+let adminKing = require('Kingdom/King');
+let adminJarl = require('Jarldom/Jarl')
 
 // Sysselmann.newTask(TASK_HARVEST, 'creep', sources[0].id, sources[0].pos, PRIORITY_MEDIUM);
 
@@ -48,7 +50,8 @@ function canDoTask(role, task)
 
 Creep.prototype.hasValidTask = function()
 {
-    if(this.memory.task && isValidTask(this.memory.task))
+    if(this.memory.task && isValidTask(this, this.memory.task)) return this.memory.task;
+    else return 0;
 }
 
 function isValidTask(creep, task)
@@ -58,18 +61,26 @@ function isValidTask(creep, task)
         case TASK_HARVEST:
         {
             if(creep.carry.energy >= creep.carryCapacity) return 0;
-            if(task.targetid && task.targetid.energy > 0) return 0;
+            if(getObjectById(task.targetid).energy <= 0) return 0;
         }
         case TASK_TRANSFER:
         {
-            if(creep.carry.energy >= creep.carryCapacity) return 0;
-            if(task.targetid && task.targetid.energy > 0) return 0;
+            if(!creep.carry.energy) return 0;
+            let target = getObjectById(task.targetid);
+            if(target.energy >= target.energyCapacity) return 0;
         }
     }
 }
 
 module.exports.loop = function()
 {
+    let creeps = _.values(Game.creeps);
+
+    // Separate creeps by role
+    let harvesters = _.filter(creeps, creep => creep.name.includes("Harvester"));
+    //let upgraders = _.filter(creeps, creep => creep.name.includes("Upgrader"));
+    //let patrollers = _.filter(creeps, creep => creep.name.includes("Patroller"));
+
 	for(var name in Memory.creeps)
 	{
 		if(!Game.creeps[name])
@@ -88,7 +99,9 @@ module.exports.loop = function()
 				roleHarvester.work(creep);
 			}
 		}
-	}
+    }
+
+    for(var )
 	
 	// -- Info Log --
 	benchmark = benchmark + Game.cpu.getUsed();
