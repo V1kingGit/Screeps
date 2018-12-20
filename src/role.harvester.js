@@ -1,6 +1,8 @@
 const	TASK_HARVEST	= 1
 const	TASK_TRANSFER	= 2
 
+import {TASK_HARVEST, TASK_TRANSFER} from '../main';
+
 function isEnergyStructure(structure)
 {
 	return structure.energy != undefined && structure.energyCapacity != undefined;
@@ -83,4 +85,5 @@ let roleHarvester =
 		}
 	}
 }
+
 module.exports = roleHarvester;
